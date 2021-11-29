@@ -31,10 +31,15 @@
     - 使用: -DWITH_FMT=PREFIX
     - 默认: 禁用
 
+  * BUILD_TEST
+    - 描述: 编译单元测试用例
+    - 使用: -DBUILD_TEST={ON|OFF}
+    - 默认: 启用
+
 # 安装
 
   ```shell
-  cmake . -B build -DCMAKE_BUILD_TYPE=Release [-DCMAKE_INSTALL_PREFIX=PREFIX] [-DWITH_FMT=PREFIX]
+  cmake . -B build -DCMAKE_BUILD_TYPE=Release [-DCMAKE_INSTALL_PREFIX=PREFIX] [-DWITH_FMT=PREFIX] [-DBUILD_TEST={ON|OFF}]
   cmake --build   build --config Release
   cmake --install build --config Release
   ```
