@@ -24,10 +24,17 @@
   * OpenSUSE
   * OracleLinux
 
+# 选项
+
+  * WITH_FMT
+    - 描述: 指定fmt库所在安装路径
+    - 使用: -DWITH_FMT=PREFIX
+    - 默认: 禁用
+
 # 安装
 
   ```shell
-  cmake . -B build -DCMAKE_BUILD_TYPE=Release [-DCMAKE_INSTALL_PREFIX=PREFIX]
+  cmake . -B build -DCMAKE_BUILD_TYPE=Release [-DCMAKE_INSTALL_PREFIX=PREFIX] [-DWITH_FMT=PREFIX]
   cmake --build   build --config Release
   cmake --install build --config Release
   ```

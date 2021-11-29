@@ -55,6 +55,30 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/source)
 
 
 #
+# 选项
+#
+SET(WITH_FMT)
+
+
+#
+# 是否设置fmt路径
+#
+IF(WITH_FMT)
+
+	#
+	# 输出信息
+	#
+	MESSAGE(STATUS "WITH_FMT: " ${WITH_FMT})
+
+	#
+	# 设置宏定义
+	#
+	ADD_DEFINITIONS(-DTOOLKIT_WITH_FMT)
+
+ENDIF()
+
+
+#
 # 添加子目录
 #
 ADD_SUBDIRECTORY(source)
